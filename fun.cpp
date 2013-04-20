@@ -2,16 +2,18 @@
 #include <iostream>;
 #include <cstdlib>;
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
 
-int math(int n) {
+int fun::math(int n) {
     int a;
 
     a = n + 5;
     return (a);
 }
 
-void interaction() {
+void fun::interaction() {
     int i;
     cout << "Please enter a number: ";
     cin >> i;

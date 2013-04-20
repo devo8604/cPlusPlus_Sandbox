@@ -8,19 +8,17 @@
 #ifndef FUN_H
 #define	FUN_H
 
-void interaction();
-int math(int n);
+class fun {
+private:
+    int variable;
+public:
+    void interaction();
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+    int math(int n);
 
+protected:
 
-
-
-#ifdef	__cplusplus
-}
-#endif
+};
 
 #endif	/* FUN_H */
 

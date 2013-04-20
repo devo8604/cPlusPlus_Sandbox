@@ -13,14 +13,9 @@
 
 using namespace std;
 
-/*
- * 
- */
-
-
-
 int main() {
-    interaction();
+    fun a;
+    a.interaction();
     return 0;
 }
 
