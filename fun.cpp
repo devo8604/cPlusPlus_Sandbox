@@ -10,7 +10,6 @@ using std::endl;
 
 int fun::addition(int n) {
     int a;
-
     a = n + 5;
     return (a);
 }
