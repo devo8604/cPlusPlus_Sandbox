@@ -11,11 +11,11 @@
 //My header file declarations
 #include "fun.h"
 
-using namespace std;
-
 int main() {
     fun a;
+    fun b;
     a.interaction();
+    b.arrayTest();
     return 0;
 }
 

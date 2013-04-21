@@ -14,7 +14,8 @@ private:
 public:
     void interaction();
 
-    int math(int n);
+    int addition(int n);
+    void arrayTest();
 
 protected:
 
