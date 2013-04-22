@@ -20,6 +20,8 @@ gameEnemy(String name1, int health1, int maxHealth1);
 
 public:
 
+void enemVec();
+
 protected:
 
 private:
