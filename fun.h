@@ -12,11 +12,12 @@ class fun {
 private:
     int variable;
 public:
-    void interaction();
+    void interaction();  //Internacts with the user to get neme and a number
 
-    int addition(int n);
-    void arrayTest();
-    void vec();
+    int addition(int n); //Request a number and adds it to 5
+    void arrayTest(); //Demonstrates interation through array elements
+    void vec(); //Demonstrates inserting objects into and interating through a vector, requires getSet.cpp
+    
 protected:
 
 };
