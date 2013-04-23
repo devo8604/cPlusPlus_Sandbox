@@ -1,4 +1,3 @@
-
 #include <iostream>;
 #include <vector>;
 
@@ -39,9 +38,9 @@ void fun::arrayTest() {
 
 void fun::vec() {
 
-    string a;
-    int b;
-    getSet *v;
+    string inName;
+    int inNum;
+    getSet *tmpGetSet;
 
     cout << "This is a vector" << endl;
 
@@ -50,17 +49,17 @@ void fun::vec() {
     for (int j = 1; j < 3; j++) {
 
         cout << "What is your name?" << endl;
-        getline(cin, a);
+        getline(cin, inName);
 
         cout << "Input a number." << endl;
-        cin >> b;
+        cin >> inNum;
 
-        v = new getSet;
-        v->setName(a);
-        v->setNum(b);
-        vec.push_back(*v);      
+        tmpGetSet = new getSet;
+        tmpGetSet->setName(inName);
+        tmpGetSet->setNum(inNum);
+        vec.push_back(*tmpGetSet);      
     }
-    delete v;
+    delete tmpGetSet;
     
     for (int i = 0; i < vec.size(); i++) {
         cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
