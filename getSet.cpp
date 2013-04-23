@@ -1,6 +1,8 @@
 
 #include <cstdlib>;
-#include <string>
+#include <string>;
+
+#include "getSet.h";
 
 using std::string;
 
@@ -11,8 +13,8 @@ void getSet::setName(string n) {
     name = n;
 }
 
-void getSet::setNum(int n) {
-    num = n;
+void getSet::setNum(int o) {
+    num = o;
 }
 
 string getSet::getName() {

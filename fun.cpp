@@ -39,32 +39,33 @@ void fun::arrayTest() {
 
 void fun::vec() {
 
-
-
+    string a;
+    int b;
+    int i = 0;
+    getSet g;
+    getSet *v;
 
     cout << "This is a vector" << endl;
 
-    string a;
-    int b;
-
-    getSet g;
-
     vector<getSet> vec;
-    int i = 1;
 
-    while (i < 3) {
+    for (int j = 1; j < 3; j++) {
 
         cout << "What is your name?" << endl;
-        getline(cin, g.setName(a));
+        getline(cin, a);
 
         cout << "Input a number." << endl;
-        getline(cin, g.setNum(b));
+        cin >> b;
 
-        vec.push_back(g.getName(), g.getNum());
+        v = new getSet;
+        v->setName(a);
+        v->setNum(b);
+        vec.push_back(*v);
+        cin.get();
     }
 
-    while (i < num.size()) {
-        cout << "you're name is " << g.getName() << " and your number is " << g.getNum() << endl;
+    while (i < vec.size()) {
+        cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
         sleep(1);
         i++;
     }
