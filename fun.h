@@ -16,7 +16,7 @@ public:
 
     int addition(int n);
     void arrayTest();
-
+    void vec();
 protected:
 
 };
