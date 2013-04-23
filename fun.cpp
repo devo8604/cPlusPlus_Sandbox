@@ -1,4 +1,3 @@
-
 #include <iostream>;
 #include <cstdlib>;
 #include <vector>;
@@ -41,8 +40,6 @@ void fun::vec() {
 
     string a;
     int b;
-    int i = 0;
-    getSet g;
     getSet *v;
 
     cout << "This is a vector" << endl;
@@ -61,12 +58,10 @@ void fun::vec() {
         v->setName(a);
         v->setNum(b);
         vec.push_back(*v);
-        cin.get();
+        delete v;
     }
-
-    while (i < vec.size()) {
+    for (int i = 0; i < vec.size(); i++) {
         cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
         sleep(1);
-        i++;
     }
 }
