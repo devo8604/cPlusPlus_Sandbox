@@ -11,8 +11,7 @@
 using std::string;
 
 class getSet {
-    string n;
-    int o;
+
 public:
     void setName(string n);
     void setNum(int o);
