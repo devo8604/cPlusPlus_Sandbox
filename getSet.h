@@ -13,8 +13,8 @@ using std::string;
 class getSet {
 
 public:
-    void setName(string n);
-    void setNum(int o);
+    void setName(string tmpName);
+    void setNum(int tmpNum);
 
     string getName();
     int getNum();
