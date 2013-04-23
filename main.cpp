@@ -14,9 +14,11 @@
 int main() {
     fun a;
     fun b;
+    fun c;
+    c.vec();
     a.interaction();
     b.arrayTest();
-    b.vec();
+
     return 0;
 }
 
