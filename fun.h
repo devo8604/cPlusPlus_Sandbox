@@ -12,7 +12,7 @@ class fun {
 private:
     int variable;
 public:
-    void interaction();  //Internacts with the user to get neme and a number
+    void interaction();  //Interacts with the user to get neme and a number
 
     int addition(int n); //Request a number and adds it to 5
     void arrayTest(); //Demonstrates interation through array elements
