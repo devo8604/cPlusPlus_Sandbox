@@ -57,9 +57,10 @@ void fun::vec() {
         v = new getSet;
         v->setName(a);
         v->setNum(b);
-        vec.push_back(*v);
-        delete v;
+        vec.push_back(*v);      
     }
+    delete v;
+    
     for (int i = 0; i < vec.size(); i++) {
         cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
         sleep(1);
