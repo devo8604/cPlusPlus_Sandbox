@@ -7,6 +7,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <stdio.h>
 
 //My header file declarations
 #include "fun.h"
@@ -21,7 +22,7 @@ int main() {
     
     std::cout << "Press any key to exit.";
     std::cin.ignore(1000, '\n');
-    std::getchar();
+    getchar();
             
     return 0;
 }

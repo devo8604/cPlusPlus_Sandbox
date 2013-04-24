@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <cstdlib>
+#include <windows.h>
 
 //My headers
 #include "fun.h"
@@ -12,6 +14,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::vector;
+
 
 int fun::addition(int n) {
     int a;
@@ -29,10 +32,10 @@ void fun::interaction() {
 void fun::arrayTest() {
 
     int ar[5];
-    srand(time(NULL));
+    std::srand(time(NULL));
 
     for (int i = 0; i < 5; i++) {
-        int ranNum = (rand() % 1000) + 1;
+        int ranNum = (std::rand() % 1000) + 1;
         ar[i] = ranNum;
     }
 
@@ -40,7 +43,7 @@ void fun::arrayTest() {
 
     for (int i = 0; i < 5; i++) {
         cout << ar[i] << endl;
-        sleep(1);
+        Sleep(1000);
     }
 }
 
@@ -58,7 +61,7 @@ void fun::vec() {
     for (int j = 1; j < 3; j++) {
 
         cout << "Please enter a name?" << endl;
-        getline(cin, inName);
+        std::getline(cin, inName);
 
         cout << "Please input a number." << endl;
         cin >> inNum;
@@ -73,7 +76,7 @@ void fun::vec() {
     }
     for (int i = 0; i < vec.size(); i++) {
         cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
-        sleep(1);
+        Sleep(1000);
     }
 }
 
