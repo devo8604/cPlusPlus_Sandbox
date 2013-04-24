@@ -1,7 +1,6 @@
 
-#include <string>;
-
-#include "getSet.h";
+#include <string>
+#include "getSet.h"
 
 using std::string;
 

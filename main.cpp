@@ -12,11 +12,11 @@
 #include "fun.h"
 
 int main() {
-    fun a;
-    fun b;
-    fun c;
-    c.vec();
-    a.interaction();
+    fun a, b, c;
+    
+    //c.curTime();
+    //c.vec();
+    //a.interaction();
     b.arrayTest();
 
     return 0;

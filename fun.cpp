@@ -1,9 +1,12 @@
-#include <iostream>;
-#include <vector>;
+#include <iostream>
+#include <vector>
+#include <ctime>
 
 //My headers
-#include "fun.h";
-#include "getSet.h";
+#include "fun.h"
+#include "getSet.h"
+
+
 
 using std::cin;
 using std::cout;
@@ -24,15 +27,20 @@ void fun::interaction() {
 }
 
 void fun::arrayTest() {
-    int ar[5] = {5, 6, 100, 4000, 68};
+
+    int ar[5];
+    srand(time(NULL));
+
+    for (int i = 0; i < 5; i++) {
+        int ranNum = (rand() % 1000) + 1;
+        ar[i] = ranNum;
+    }
 
     cout << "This is an array." << endl;
 
-    int t = 0;
-    while (t < 5) {
-        cout << ar[t] << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << ar[i] << endl;
         sleep(1);
-        t++;
     }
 }
 
@@ -48,11 +56,11 @@ void fun::vec() {
     vector<getSet> vec;
 
     for (int j = 1; j < 3; j++) {
-        
-        cout << "What is your name?" << endl; 
+
+        cout << "Please enter a name?" << endl;
         getline(cin, inName);
 
-        cout << "Input a number." << endl;
+        cout << "Please input a number." << endl;
         cin >> inNum;
         cin.ignore();
 
@@ -63,8 +71,18 @@ void fun::vec() {
 
         delete tmpGetSet;
     }
-        for (int i = 0; i < vec.size(); i++) {
-            cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
-            sleep(1);
-        }
+    for (int i = 0; i < vec.size(); i++) {
+        cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
+        sleep(1);
     }
+}
+
+void fun::curTime() {
+    struct tm * timeinfo;
+    time_t timer;
+
+    time(&timer);
+    timeinfo = localtime(&timer);
+    cout << "Current local time is " << asctime(timeinfo) << endl;
+}
+
