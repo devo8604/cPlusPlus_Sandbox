@@ -48,23 +48,23 @@ void fun::vec() {
     vector<getSet> vec;
 
     for (int j = 1; j < 3; j++) {
-        while (inName != "" || inName != string)
-            cout << "What is your name?" << endl;
-                getline(cin, inName);
-    }
-    while (inNum != "" || inNum != int) {
+        
+        cout << "What is your name?" << endl; 
+        getline(cin, inName);
+
         cout << "Input a number." << endl;
         cin >> inNum;
-    }
-    tmpGetSet = new getSet;
-    tmpGetSet->setName(inName);
-    tmpGetSet->setNum(inNum);
-    vec.push_back(*tmpGetSet);
+        cin.ignore();
 
-    delete tmpGetSet;
+        tmpGetSet = new getSet;
+        tmpGetSet->setName(inName);
+        tmpGetSet->setNum(inNum);
+        vec.push_back(*tmpGetSet);
 
-    for (int i = 0; i < vec.size(); i++) {
-        cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
-        sleep(1);
+        delete tmpGetSet;
     }
-}
+        for (int i = 0; i < vec.size(); i++) {
+            cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
+            sleep(1);
+        }
+    }
