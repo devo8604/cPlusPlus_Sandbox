@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>getSet.h</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #0e0e0e; font-family: Monospaced}
+pre {color: #ffffff; background-color: #0e0e0e; font-family: Monospaced}
+table {color: #ffffff; font-family: Monospaced}
+.preprocessor-identifier {color: #6185a6}
+.ST0 {color: #cccccb; background-color: #253e5a; font-family: Monospaced; font-style: italic}
+.keyword-directive {color: #ffc800}
+.preprocessor-keyword-directive {color: #009b00}
+.ST2 {font-family: Monospaced; font-weight: bold}
+.pragma-omp-keyword-directive {color: #2e92c7}
+.preprocessor-system-include-literal {color: #8f9d6a}
+.ST1 {color: #cccccb; font-family: Monospaced; font-style: italic}
+.ST3 {color: #8f9d6a; font-family: Monospaced; font-weight: bold}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\Devon Smith\Documents\NetBeansProjects\cPlusPlus_Sandbox\getSet.h</td></tr></table>
+<pre>
+ 1 <span class="ST0">/* </span>
+ 2 <span class="ST1"> * File:   getSet.h</span>
+ 3 <span class="ST1"> * Author: devonsmith</span>
+ 4 <span class="ST1"> *</span>
+ 5 <span class="ST1"> * Created on April 22, 2013, 8:01 PM</span>
+ 6 <span class="ST1"> */</span>
+ 7 
+ 8 
+ 9 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">ifndef</span> <span class="preprocessor-identifier">GETSET_H</span>
+10 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">define</span> <span class="pragma-omp-keyword-directive">GETSET_H</span>
+11 <span class="keyword-directive">using</span> <span class="preprocessor-identifier">std</span>::<span class="pragma-omp-keyword-directive">string</span>;
+12 
+13 <span class="keyword-directive">class</span> <span class="preprocessor-identifier">getSet</span> {
+14 
+15 <span class="keyword-directive">public</span>:
+16     <span class="keyword-directive">void</span> <span class="ST2">setName</span>(<span class="pragma-omp-keyword-directive">string</span> <span class="preprocessor-identifier">tmpName</span>);
+17     <span class="keyword-directive">void</span> <span class="ST2">setNum</span>(<span class="keyword-directive">int</span> <span class="preprocessor-identifier">tmpNum</span>);
+18 
+19     <span class="pragma-omp-keyword-directive">string</span> <span class="ST2">getName</span>();
+20     <span class="keyword-directive">int</span> <span class="ST2">getNum</span>();
+21 
+22 <span class="keyword-directive">private</span>:
+23     <span class="pragma-omp-keyword-directive">string</span> <span class="preprocessor-identifier">name</span>;
+24     <span class="keyword-directive">int</span> <span class="preprocessor-identifier">num</span>;
+25 };
+26 
+27 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">ifdef</span>  <span class="pragma-omp-keyword-directive">__cplusplus</span>
+28 <span class="keyword-directive">extern</span> <span class="ST3">&quot;</span><span class="preprocessor-system-include-literal">C</span><span class="ST3">&quot;</span> {
+29 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">endif</span>
+30 
+31 
+32 
+33 
+34 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">ifdef</span>  <span class="pragma-omp-keyword-directive">__cplusplus</span>
+35 }
+36 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">endif</span>
+37 
+38 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">endif</span>  <span class="ST1">/* GETSET_H */</span>
+39 
+40 
+</pre></body>
+</html>

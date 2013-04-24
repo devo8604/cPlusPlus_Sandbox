@@ -14,11 +14,15 @@
 int main() {
     fun a, b, c;
     
-    //c.curTime();
-    //c.vec();
-    //a.interaction();
+    c.curTime();
+    c.vec();
+    a.interaction();
     b.arrayTest();
-
+    
+    std::cout << "Press any key to exit.";
+    std::cin.ignore(1000, '\n');
+    std::getchar();
+            
     return 0;
 }
 

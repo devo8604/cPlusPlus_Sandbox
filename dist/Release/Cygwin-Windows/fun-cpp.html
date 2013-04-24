@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>fun.cpp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #ffffff; background-color: #0e0e0e; font-family: Monospaced}
+pre {color: #ffffff; background-color: #0e0e0e; font-family: Monospaced}
+table {color: #ffffff; font-family: Monospaced}
+.preprocessor-identifier {color: #6185a6}
+.ST1 {color: #8f9d6a; background-color: #253e5a}
+.highlight-caret-row {background-color: #253e5a}
+.ST0 {color: #009b00; background-color: #253e5a}
+.keyword-directive {color: #ffc800}
+.number {color: #99ff00}
+.preprocessor-keyword-directive {color: #009b00}
+.pragma-omp-keyword-directive {color: #2e92c7}
+.ST3 {font-family: Monospaced; font-weight: bold}
+.ST2 {color: #cccccb; font-family: Monospaced; font-style: italic}
+.preprocessor-system-include-literal {color: #8f9d6a}
+.ST4 {color: #8f9d6a; font-family: Monospaced; font-weight: bold}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Users\Devon Smith\Documents\NetBeansProjects\cPlusPlus_Sandbox\fun.cpp</td></tr></table>
+<pre>
+ 1 <span class="ST0">#</span><span class="ST0">include</span> <span class="ST1">&lt;iostream&gt;</span>
+ 2 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">include</span> <span class="preprocessor-system-include-literal">&lt;vector&gt;</span>
+ 3 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">include</span> <span class="preprocessor-system-include-literal">&lt;ctime&gt;</span>
+ 4 
+ 5 <span class="ST2">//My headers</span>
+ 6 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">include</span> <span class="preprocessor-system-include-literal">&quot;fun.h&quot;</span>
+ 7 <span class="preprocessor-keyword-directive">#</span><span class="preprocessor-keyword-directive">include</span> <span class="preprocessor-system-include-literal">&quot;getSet.h&quot;</span>
+ 8 
+ 9 
+10 
+11 <span class="keyword-directive">using</span> <span class="preprocessor-identifier">std</span>::<span class="preprocessor-identifier">cin</span>;
+12 <span class="keyword-directive">using</span> <span class="preprocessor-identifier">std</span>::<span class="preprocessor-identifier">cout</span>;
+13 <span class="keyword-directive">using</span> <span class="preprocessor-identifier">std</span>::endl;
+14 <span class="keyword-directive">using</span> <span class="preprocessor-identifier">std</span>::<span class="preprocessor-identifier">vector</span>;
+15 
+16 <span class="keyword-directive">int</span> <span class="preprocessor-identifier">fun</span>::<span class="ST3">addition</span>(<span class="keyword-directive">int</span> <span class="preprocessor-identifier">n</span>) {
+17     <span class="keyword-directive">int</span> <span class="preprocessor-identifier">a</span>;
+18     <span class="preprocessor-identifier">a</span> = <span class="preprocessor-identifier">n</span> + <span class="number">5</span>;
+19     <span class="keyword-directive">return</span> (<span class="preprocessor-identifier">a</span>);
+20 }
+21 
+22 <span class="keyword-directive">void</span> <span class="preprocessor-identifier">fun</span>::<span class="ST3">interaction</span>() {
+23     <span class="keyword-directive">int</span> <span class="preprocessor-identifier">i</span>;
+24     <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">Please enter a number: </span><span class="ST4">&quot;</span>;
+25     <span class="preprocessor-identifier">cin</span> &gt;&gt; <span class="preprocessor-identifier">i</span>;
+26     <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">The value of </span><span class="ST4">&quot;</span> &lt;&lt; <span class="preprocessor-identifier">i</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal"> + 5 is </span><span class="ST4">&quot;</span> &lt;&lt; addition(<span class="preprocessor-identifier">i</span>) &lt;&lt; endl;
+27 }
+28 
+29 <span class="keyword-directive">void</span> <span class="preprocessor-identifier">fun</span>::<span class="ST3">arrayTest</span>() {
+30 
+31     <span class="keyword-directive">int</span> <span class="preprocessor-identifier">ar</span>[<span class="number">5</span>];
+32     srand(time(<span class="pragma-omp-keyword-directive">NULL</span>));
+33 
+34     <span class="keyword-directive">for</span> (<span class="keyword-directive">int</span> <span class="preprocessor-identifier">i</span> = <span class="number">0</span>; <span class="preprocessor-identifier">i</span> &lt; <span class="number">5</span>; <span class="preprocessor-identifier">i</span>++) {
+35         <span class="keyword-directive">int</span> <span class="preprocessor-identifier">ranNum</span> = (rand() % <span class="number">1000</span>) + <span class="number">1</span>;
+36         <span class="preprocessor-identifier">ar</span>[<span class="preprocessor-identifier">i</span>] = <span class="preprocessor-identifier">ranNum</span>;
+37     }
+38 
+39     <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">This is an array.</span><span class="ST4">&quot;</span> &lt;&lt; endl;
+40 
+41     <span class="keyword-directive">for</span> (<span class="keyword-directive">int</span> <span class="preprocessor-identifier">i</span> = <span class="number">0</span>; <span class="preprocessor-identifier">i</span> &lt; <span class="number">5</span>; <span class="preprocessor-identifier">i</span>++) {
+42         <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="preprocessor-identifier">ar</span>[<span class="preprocessor-identifier">i</span>] &lt;&lt; endl;
+43         sleep(<span class="number">1</span>);
+44     }
+45 }
+46 
+47 <span class="keyword-directive">void</span> <span class="preprocessor-identifier">fun</span>::<span class="ST3">vec</span>() {
+48 
+49     <span class="pragma-omp-keyword-directive">string</span> <span class="preprocessor-identifier">inName</span>;
+50     <span class="keyword-directive">int</span> <span class="preprocessor-identifier">inNum</span>;
+51     <span class="preprocessor-identifier">getSet</span> <span class="preprocessor-identifier">g</span>;
+52     <span class="preprocessor-identifier">getSet</span> *<span class="preprocessor-identifier">tmpGetSet</span>;
+53 
+54     <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">This is a vector</span><span class="ST4">&quot;</span> &lt;&lt; endl;
+55 
+56     <span class="preprocessor-identifier">vector</span>&lt;<span class="preprocessor-identifier">getSet</span>&gt; <span class="preprocessor-identifier">vec</span>;
+57 
+58     <span class="keyword-directive">for</span> (<span class="keyword-directive">int</span> <span class="preprocessor-identifier">j</span> = <span class="number">1</span>; <span class="preprocessor-identifier">j</span> &lt; <span class="number">3</span>; <span class="preprocessor-identifier">j</span>++) {
+59 
+60         <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">Please enter a name?</span><span class="ST4">&quot;</span> &lt;&lt; endl;
+61         getline(<span class="preprocessor-identifier">cin</span>, <span class="preprocessor-identifier">inName</span>);
+62 
+63         <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">Please input a number.</span><span class="ST4">&quot;</span> &lt;&lt; endl;
+64         <span class="preprocessor-identifier">cin</span> &gt;&gt; <span class="preprocessor-identifier">inNum</span>;
+65         <span class="preprocessor-identifier">cin</span>.ignore();
+66 
+67         <span class="preprocessor-identifier">tmpGetSet</span> = <span class="keyword-directive">new</span> <span class="preprocessor-identifier">getSet</span>;
+68         <span class="preprocessor-identifier">tmpGetSet</span>-&gt;setName(<span class="preprocessor-identifier">inName</span>);
+69         <span class="preprocessor-identifier">tmpGetSet</span>-&gt;setNum(<span class="preprocessor-identifier">inNum</span>);
+70         <span class="preprocessor-identifier">vec</span>.push_back(*<span class="preprocessor-identifier">tmpGetSet</span>);
+71 
+72         <span class="keyword-directive">delete</span> <span class="preprocessor-identifier">tmpGetSet</span>;
+73     }
+74     <span class="keyword-directive">for</span> (<span class="keyword-directive">int</span> <span class="preprocessor-identifier">i</span> = <span class="number">0</span>; <span class="preprocessor-identifier">i</span> &lt; <span class="preprocessor-identifier">vec</span>.size(); <span class="preprocessor-identifier">i</span>++) {
+75         <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">you</span><span class="preprocessor-system-include-literal">&#39;</span><span class="preprocessor-system-include-literal">re name is </span><span class="ST4">&quot;</span> &lt;&lt; <span class="preprocessor-identifier">vec</span>[<span class="preprocessor-identifier">i</span>].getName() &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal"> and your number is </span><span class="ST4">&quot;</span> &lt;&lt; <span class="preprocessor-identifier">vec</span>[<span class="preprocessor-identifier">i</span>].getNum() &lt;&lt; endl;
+76         sleep(<span class="number">1</span>);
+77     }
+78 }
+79 
+80 <span class="keyword-directive">void</span> <span class="preprocessor-identifier">fun</span>::<span class="ST3">curTime</span>() {
+81     <span class="keyword-directive">struct</span> <span class="preprocessor-identifier">tm</span> * <span class="preprocessor-identifier">timeinfo</span>;
+82     <span class="pragma-omp-keyword-directive">time_t</span> <span class="preprocessor-identifier">timer</span>;
+83 
+84     time(&amp;<span class="preprocessor-identifier">timer</span>);
+85     <span class="preprocessor-identifier">timeinfo</span> = localtime(&amp;<span class="preprocessor-identifier">timer</span>);
+86     <span class="preprocessor-identifier">cout</span> &lt;&lt; <span class="ST4">&quot;</span><span class="preprocessor-system-include-literal">Current local time is </span><span class="ST4">&quot;</span> &lt;&lt; asctime(<span class="preprocessor-identifier">timeinfo</span>) &lt;&lt; endl;
+87 }
+88 
+89 
+</pre></body>
+</html>

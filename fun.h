@@ -10,11 +10,10 @@
 
 class fun {
 private:
-    int variable;
-public:
-    void interaction();  //Interacts with the user to get name and a number
 
+public:
     int addition(int n); //Request a number and adds it to 5
+    void interaction();  //Interacts with the user to get name and a number
     void arrayTest(); //Demonstrates iteration through array elements
     void vec(); //Demonstrates inserting objects into and iterating through a vector, requires getSet.cpp
     void curTime(); //Displays current time on the console
