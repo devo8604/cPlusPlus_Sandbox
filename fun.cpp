@@ -8,8 +8,6 @@
 #include "fun.h"
 #include "getSet.h"
 
-
-
 using std::cin;
 using std::cout;
 using std::endl;

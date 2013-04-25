@@ -8,7 +8,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <stdio.h>
-
 //My header file declarations
 #include "fun.h"
 
