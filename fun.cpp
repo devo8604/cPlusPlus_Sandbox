@@ -11,7 +11,6 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-
 int fun::addition(int n) {
     int a;
     a = n + 5;
@@ -35,11 +34,11 @@ void fun::arrayTest() {
         ar[i] = ranNum;
     }
 
-    cout << "This is an array." << endl;
+    cout << "This is an array." << endl << endl;
 
     for (int i = 0; i < 5; i++) {
-        cout << ar[i] << endl;
-        sleep(1000);
+        cout << "Element " << i << ": " << ar[i] << endl;
+        sleep(1);
     }
 }
 
@@ -54,7 +53,7 @@ void fun::vec() {
 
     vector<getSet> vec;
 
-    for (int j = 1; j < 3; j++) {
+    for (int j = 0; j < 2; j++) {
 
         cout << "Please enter a name?" << endl;
         std::getline(cin, inName);
@@ -68,11 +67,11 @@ void fun::vec() {
         tmpGetSet->setNum(inNum);
         vec.push_back(*tmpGetSet);
 
-        delete tmpGetSet;
     }
     for (int i = 0; i < vec.size(); i++) {
-        cout << "you're name is " << vec[i].getName() << " and your number is " << vec[i].getNum() << endl;
-        sleep(1000);
+        cout << "you're name is " << vec[i].getName()
+                << " and your number is " << vec[i].getNum() << endl;
+        sleep(1);
     }
 }
 

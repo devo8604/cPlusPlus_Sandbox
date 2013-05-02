@@ -19,7 +19,7 @@ int main() {
     a.interaction();
     b.arrayTest();
     
-    std::cout << "Press any key to exit.";
+    std::cout << "Press Enter to exit.";
     std::cin.ignore(1000, '\n');
     getchar();
             
